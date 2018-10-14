@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
+        <AssemblyTitle>Rocket.Surgery Client Libraries for connecting to an api</AssemblyTitle>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+        <PackageReference Include="Rocket.Surgery.Core.Marten" />
+        <PackageReference Include="Rocket.Surgery.Core.Validation" />
+        <PackageReference Include="Rocket.Surgery.Builders" />
+        <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" />
+        <PackageReference Include="Rocket.Surgery.Extensions.Serilog.Abstractions" />
+    </ItemGroup>
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+            <_Parameter1>Rocket.Surgery.AspNetCore.Tests</_Parameter1>
+        </AssemblyAttribute>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Core.MediatR\Rocket.Surgery.Core.MediatR.csproj" />
+    </ItemGroup>
+</Project>

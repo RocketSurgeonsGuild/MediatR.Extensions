@@ -1,0 +1,8 @@
+<Project>
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Common.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <IsPackable>true</IsPackable>
+        <RootNamespace>$(MSBuildProjectName.Replace('.Abstractions', ''))</RootNamespace>
+    </PropertyGroup>
+</Project>

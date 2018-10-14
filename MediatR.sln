@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D9AF5A88-4F7E-4E87-A754-A9E273156B34}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8339FA60-2016-4880-9EC7-D8755AB7D4F1}"
+	ProjectSection(SolutionItems) = preProject
+		test\Directory.Build.props = test\Directory.Build.props
+		test\Directory.Build.targets = test\Directory.Build.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{32258BA4-E917-4D6C-BDFB-FF9B99426DBD}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.gitlab-ci.yml = .gitlab-ci.yml
+		.gitmodules = .gitmodules
+		cake.config = cake.config
+		GitVersion.yml = GitVersion.yml
+		global.json = global.json
+		NuGet.config = NuGet.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{87383726-F9DC-468D-82E1-EA9ECD332202}"
+	ProjectSection(SolutionItems) = preProject
+		build.ps1 = build.ps1
+		cakefile.cake = cakefile.cake
+		Common.Build.props = Common.Build.props
+		tools\packages.config = tools\packages.config
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Core.MediatR", "src\Core.MediatR\Rocket.Surgery.Core.MediatR.csproj", "{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.MediatR.Tests", "test\MediatR.Tests\Rocket.Surgery.MediatR.Tests.csproj", "{D36BE551-1155-4D58-BA46-193A16C2432C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Core.MediatR.Pipeline", "src\Core.MediatR.Pipeline\Rocket.Surgery.Core.MediatR.Pipeline.csproj", "{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D36BE551-1155-4D58-BA46-193A16C2432C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D36BE551-1155-4D58-BA46-193A16C2432C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D36BE551-1155-4D58-BA46-193A16C2432C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D36BE551-1155-4D58-BA46-193A16C2432C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C} = {D9AF5A88-4F7E-4E87-A754-A9E273156B34}
+		{D36BE551-1155-4D58-BA46-193A16C2432C} = {8339FA60-2016-4880-9EC7-D8755AB7D4F1}
+		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E} = {D9AF5A88-4F7E-4E87-A754-A9E273156B34}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAD02C46-5182-4273-BE80-2997868A5FD9}
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 90da1d39-38de-4251-ae12-f8264e62bfd0
+	EndGlobalSection
+EndGlobal

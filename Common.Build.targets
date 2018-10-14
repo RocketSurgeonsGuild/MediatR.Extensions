@@ -1,0 +1,30 @@
+<Project>
+    <ItemGroup>
+        <PackageReference Update="MediatR" Version="5.1.0" />
+        <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="5.1.0" />
+        <PackageReference Update="ReadySelect.Core.Marten" Version="3.14.0" />
+        <PackageReference Update="ReadySelect.Core.Validation" Version="6.4.0" />
+        <PackageReference Update="Rocket.Surgery.Builders" Version="3.1.0" />
+        <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="0.12.1" />
+        <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="0.12.1" />
+        <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="0.9.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Update="Rocket.Surgery.Build.Metadata" Version="3.0.0" PrivateAssets="All" />
+        <PackageReference Update="SourceLink.Embed.AllSourceFiles" Version="2.8.3" PrivateAssets="All" />
+        <PackageReference Update="SourceLink.Copy.PdbFiles" Version="2.8.3" PrivateAssets="All" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Update="Autofac.Extras.FakeItEasy" Version="5.0.1" />
+        <PackageReference Update="Bogus" Version="24.3.0" />
+        <PackageReference Update="coverlet.msbuild" Version="2.3.0" />
+        <PackageReference Update="FakeItEasy" Version="4.9.1" />
+        <PackageReference Update="FakeItEasy.Analyzer.CSharp" Version="4.9.1" />
+        <PackageReference Update="FluentAssertions" Version="5.4.2" />
+        <PackageReference Update="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+        <PackageReference Update="Rocket.Surgery.Extensions.Testing" Version="0.13.0" />
+        <PackageReference Update="xunit" Version="2.4.0" />
+        <PackageReference Update="xunit.runner.visualstudio" Version="2.4.0" />
+        <PackageReference Update="XunitXml.TestLogger" Version="2.0.0" />
+    </ItemGroup>
+</Project>
