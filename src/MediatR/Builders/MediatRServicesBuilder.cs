@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Rocket.Surgery.Builders;
 
-namespace Rocket.Surgery.Core.MediatR.Builders
+namespace Rocket.Surgery.Extensions.MediatR.Builders
 {
     public class MediatRServicesBuilder : Builder<Rocket.Surgery.Extensions.DependencyInjection.IServiceConventionContext>
     {

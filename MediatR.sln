@@ -36,11 +36,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{87383726
 		tools\packages.config = tools\packages.config
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Core.MediatR", "src\Core.MediatR\Rocket.Surgery.Core.MediatR.csproj", "{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Extensions.MediatR", "src\MediatR\Rocket.Surgery.Extensions.MediatR.csproj", "{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.MediatR.Tests", "test\MediatR.Tests\Rocket.Surgery.MediatR.Tests.csproj", "{D36BE551-1155-4D58-BA46-193A16C2432C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Core.MediatR.Pipeline", "src\Core.MediatR.Pipeline\Rocket.Surgery.Core.MediatR.Pipeline.csproj", "{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Extensions.MediatR.Tests", "test\MediatR.Tests\Rocket.Surgery.Extensions.MediatR.Tests.csproj", "{D36BE551-1155-4D58-BA46-193A16C2432C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,10 +54,6 @@ Global
 		{D36BE551-1155-4D58-BA46-193A16C2432C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D36BE551-1155-4D58-BA46-193A16C2432C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D36BE551-1155-4D58-BA46-193A16C2432C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,7 +61,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C} = {D9AF5A88-4F7E-4E87-A754-A9E273156B34}
 		{D36BE551-1155-4D58-BA46-193A16C2432C} = {8339FA60-2016-4880-9EC7-D8755AB7D4F1}
-		{585D8A66-3762-4CF8-BB90-3C2BBBFC5C5E} = {D9AF5A88-4F7E-4E87-A754-A9E273156B34}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DAD02C46-5182-4273-BE80-2997868A5FD9}

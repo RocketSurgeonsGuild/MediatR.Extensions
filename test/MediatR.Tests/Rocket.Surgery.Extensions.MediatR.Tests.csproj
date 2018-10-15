@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>netcoreapp2.0;netcoreapp2.1;net461</TargetFrameworks>
+        <TargetFrameworks>netcoreapp2.0;netcoreapp2.1</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Core.MediatR\Rocket.Surgery.Core.MediatR.csproj" />
+        <ProjectReference Include="..\..\src\MediatR\Rocket.Surgery.Extensions.MediatR.csproj" />
         <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection" />
     </ItemGroup>
     <ItemGroup>

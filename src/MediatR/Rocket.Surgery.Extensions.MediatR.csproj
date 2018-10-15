@@ -4,9 +4,13 @@
         <AssemblyTitle>Rocket.Surgery MediatR for .NET Core</AssemblyTitle>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="MediatR" />
+        <ProjectReference Include="..\MediatR.Abstractions\Rocket.Surgery.Extensions.MediatR.Abstractions.csproj" />
+    </ItemGroup>
+    <ItemGroup>
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
         <PackageReference Include="Rocket.Surgery.Builders" />
+        <PackageReference Include="Rocket.Surgery.Conventions" />
+        <PackageReference Include="System.Diagnostics.DiagnosticSource" />
         <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" />
     </ItemGroup>
 </Project>

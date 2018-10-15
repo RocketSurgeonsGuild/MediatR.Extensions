@@ -8,8 +8,6 @@ using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Rocket.Surgery.Core.MediatR;
-using Rocket.Surgery.Core.MediatR.Builders;
 using Rocket.Surgery.Conventions.Reflection;
 using Rocket.Surgery.Conventions.Scanners;
 using Rocket.Surgery.Extensions.DependencyInjection;
@@ -17,7 +15,7 @@ using Rocket.Surgery.Extensions.Testing;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Rocket.Surgery.MediatR.Tests
+namespace Rocket.Surgery.Extensions.MediatR.Tests
 {
     public class MediatRTests : AutoTestBase
     {
