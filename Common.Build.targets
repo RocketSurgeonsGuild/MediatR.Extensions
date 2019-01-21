@@ -8,7 +8,7 @@
         <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="2.2.0" />
         <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="1.1.0" />
         <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="1.1.0" />
-        <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="1.0.4" />
+        <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="1.1.0" />
         <PackageReference Update="System.Diagnostics.DiagnosticSource" Version="4.5.1" />
     </ItemGroup>
     <ItemGroup>
