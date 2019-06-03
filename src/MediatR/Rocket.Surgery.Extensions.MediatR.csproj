@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;netcoreapp2.1;netcoreapp3.0</TargetFrameworks>
         <AssemblyTitle>Rocket.Surgery MediatR for .NET Core</AssemblyTitle>
     </PropertyGroup>
     <ItemGroup>
@@ -8,7 +8,6 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
-        <PackageReference Include="Rocket.Surgery.Builders" />
         <PackageReference Include="Rocket.Surgery.Conventions" />
         <PackageReference Include="System.Diagnostics.DiagnosticSource" />
         <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" />

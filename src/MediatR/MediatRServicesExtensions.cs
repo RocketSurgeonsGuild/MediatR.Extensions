@@ -2,22 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-#if NETSTANDARD1_3 || NET451
-using Autofac;
-#endif
 using MediatR;
-using Rocket.Surgery.Extensions.MediatR.Builders;
 using Rocket.Surgery.Conventions.Reflection;
+using Rocket.Surgery.Extensions.DependencyInjection;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection
 {
     public static class MediatRServicesExtensions
     {
-        public static MediatRServicesBuilder WithMediatR(this Rocket.Surgery.Extensions.DependencyInjection.IServiceConventionContext builder)
+        public static IServiceConventionContext WithMediatR(this IServiceConventionContext builder)
         {
             DefaultServices(builder.Services, builder.AssemblyCandidateFinder);
-            return new MediatRServicesBuilder(builder);
+            return builder;
         }
 
         private static void DefaultServices(IServiceCollection services, IAssemblyCandidateFinder assemblyCandidateFinder)
