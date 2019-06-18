@@ -3,15 +3,15 @@
         <PackageReference Update="System.Diagnostics.DiagnosticSource" Version="4.5.1" />
     </ItemGroup>
     <ItemGroup Condition="'$(TargetFramework)'=='netcoreapp3.0'">
-        <PackageReference Update="System.Diagnostics.DiagnosticSource" Version="4.6.0-preview5.19224.8" />
+        <PackageReference Update="System.Diagnostics.DiagnosticSource" Version="4.6.0-preview6.19303.8" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Update="MediatR" Version="5.1.0" />
         <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
-        <PackageReference Update="Rocket.Surgery.Conventions" Version="5.0.1" />
-        <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="5.0.1" />
-        <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="5.0.0" />
-        <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+        <PackageReference Update="Rocket.Surgery.Conventions" Version="5.0.2" />
+        <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="5.0.2" />
+        <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="5.0.2" />
+        <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="5.0.2" />
         <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="3.1.0" />
     </ItemGroup>
     <ItemGroup>
@@ -22,10 +22,10 @@
         <PackageReference Update="Rocket.Surgery.Extensions.Testing" Version="1.1.7" />
         <PackageReference Update="Autofac.Extras.FakeItEasy" Version="5.0.1" />
         <PackageReference Update="Bogus" Version="27.0.1" />
-        <PackageReference Update="coverlet.msbuild" Version="2.6.1" />
+        <PackageReference Update="coverlet.msbuild" Version="2.6.2" />
         <PackageReference Update="FakeItEasy" Version="5.1.1" />
         <PackageReference Update="FakeItEasy.Analyzer.CSharp" Version="5.1.1" />
-        <PackageReference Update="FluentAssertions" Version="5.6.0" />
+        <PackageReference Update="FluentAssertions" Version="5.7.0" />
         <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.1.1" />
         <PackageReference Update="xunit" Version="2.4.1" />
         <PackageReference Update="xunit.runner.visualstudio" Version="2.4.1" />
