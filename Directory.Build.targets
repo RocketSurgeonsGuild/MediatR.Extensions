@@ -13,7 +13,7 @@
     <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="5.0.3" />
     <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="5.1.2" />
     <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="5.1.2" />
-    <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="5.0.2" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="5.0.3" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Rocket.Surgery.Build.Metadata" Version="3.3.1" PrivateAssets="All" />
