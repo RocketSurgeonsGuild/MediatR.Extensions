@@ -1,71 +1,98 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27110.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D9AF5A88-4F7E-4E87-A754-A9E273156B34}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29006.145
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".config", ".config", "{5E1B98B4-5433-4927-985F-A21C707F9D6F}"
 	ProjectSection(SolutionItems) = preProject
-		src\Directory.Build.props = src\Directory.Build.props
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.gitmodules = .gitmodules
+		GitVersion.yml = GitVersion.yml
+		LICENSE = LICENSE
+		NuGet.config = NuGet.config
+		omnisharp.json = omnisharp.json
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8339FA60-2016-4880-9EC7-D8755AB7D4F1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{43A8F453-FC34-4E1B-8F1B-1C829B9CBAC3}"
+	ProjectSection(SolutionItems) = preProject
+		.appveyor.yml = .appveyor.yml
+		azure-pipelines.yml = azure-pipelines.yml
+		build.ps1 = build.ps1
+		build.sh = build.sh
+		cakefile.cake = cakefile.cake
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		tools\packages.config = tools\packages.config
+		Packages.props = Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".dependabot", ".dependabot", "{5197326A-B8BB-4C7B-8A66-84B5132573B4}"
+	ProjectSection(SolutionItems) = preProject
+		.dependabot\config.yml = .dependabot\config.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8FFDF555-DB50-45F9-9A2D-6410F39151C3}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+		src\Directory.Build.targets = src\Directory.Build.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{DF33E0FB-9790-4654-B60F-8AB22E0CC3D1}"
 	ProjectSection(SolutionItems) = preProject
 		test\Directory.Build.props = test\Directory.Build.props
 		test\Directory.Build.targets = test\Directory.Build.targets
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{32258BA4-E917-4D6C-BDFB-FF9B99426DBD}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		.gitattributes = .gitattributes
-		.gitignore = .gitignore
-		.gitlab-ci.yml = .gitlab-ci.yml
-		.gitmodules = .gitmodules
-		cake.config = cake.config
-		GitVersion.yml = GitVersion.yml
-		global.json = global.json
-		NuGet.config = NuGet.config
-		README.md = README.md
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.Extensions.MediatR", "src\MediatR\Rocket.Surgery.Extensions.MediatR.csproj", "{54B3E879-516B-4EAF-A627-5BD34C50E9C0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{87383726-F9DC-468D-82E1-EA9ECD332202}"
-	ProjectSection(SolutionItems) = preProject
-		build.ps1 = build.ps1
-		cakefile.cake = cakefile.cake
-		Common.Build.props = Common.Build.props
-		tools\packages.config = tools\packages.config
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Extensions.MediatR", "src\MediatR\Rocket.Surgery.Extensions.MediatR.csproj", "{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocket.Surgery.Extensions.MediatR.Tests", "test\MediatR.Tests\Rocket.Surgery.Extensions.MediatR.Tests.csproj", "{D36BE551-1155-4D58-BA46-193A16C2432C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocket.Surgery.Extensions.MediatR.Tests", "test\MediatR.Tests\Rocket.Surgery.Extensions.MediatR.Tests.csproj", "{776CD5C8-2293-47BF-B3FA-E879FAE83575}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D36BE551-1155-4D58-BA46-193A16C2432C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D36BE551-1155-4D58-BA46-193A16C2432C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D36BE551-1155-4D58-BA46-193A16C2432C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D36BE551-1155-4D58-BA46-193A16C2432C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Debug|x64.Build.0 = Debug|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Debug|x86.Build.0 = Debug|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Release|x64.ActiveCfg = Release|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Release|x64.Build.0 = Release|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Release|x86.ActiveCfg = Release|Any CPU
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0}.Release|x86.Build.0 = Release|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Debug|x64.Build.0 = Debug|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Debug|x86.Build.0 = Debug|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Release|x64.ActiveCfg = Release|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Release|x64.Build.0 = Release|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Release|x86.ActiveCfg = Release|Any CPU
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{FD55DB0C-6316-446B-9BC5-ABC9CBE5199C} = {D9AF5A88-4F7E-4E87-A754-A9E273156B34}
-		{D36BE551-1155-4D58-BA46-193A16C2432C} = {8339FA60-2016-4880-9EC7-D8755AB7D4F1}
-	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DAD02C46-5182-4273-BE80-2997868A5FD9}
+		SolutionGuid = {439897C2-CCBD-44FE-B2DC-A3E4670ADA59}
 	EndGlobalSection
-	GlobalSection(CodealikeProperties) = postSolution
-		SolutionGuid = 90da1d39-38de-4251-ae12-f8264e62bfd0
+	GlobalSection(NestedProjects) = preSolution
+		{54B3E879-516B-4EAF-A627-5BD34C50E9C0} = {8FFDF555-DB50-45F9-9A2D-6410F39151C3}
+		{776CD5C8-2293-47BF-B3FA-E879FAE83575} = {DF33E0FB-9790-4654-B60F-8AB22E0CC3D1}
 	EndGlobalSection
 EndGlobal
