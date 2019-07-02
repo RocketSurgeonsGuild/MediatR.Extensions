@@ -1,11 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;netcoreapp2.1;netcoreapp3.0</TargetFrameworks>
         <AssemblyTitle>Rocket.Surgery MediatR for .NET Core</AssemblyTitle>
     </PropertyGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\MediatR.Abstractions\Rocket.Surgery.Extensions.MediatR.Abstractions.csproj" />
-    </ItemGroup>
     <ItemGroup>
         <PackageReference Include="MediatR" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />

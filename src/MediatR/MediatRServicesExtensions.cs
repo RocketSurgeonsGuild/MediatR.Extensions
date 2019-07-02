@@ -9,8 +9,16 @@ using Rocket.Surgery.Extensions.DependencyInjection;
 // ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection
 {
+    /// <summary>
+    /// Class MediatRServicesExtensions.
+    /// </summary>
     public static class MediatRServicesExtensions
     {
+        /// <summary>
+        /// Withes the mediat r.
+        /// </summary>
+        /// <param name="builder">The builder.</param>
+        /// <returns>IServiceConventionContext.</returns>
         public static IServiceConventionContext WithMediatR(this IServiceConventionContext builder)
         {
             DefaultServices(builder.Services, builder.AssemblyCandidateFinder);
