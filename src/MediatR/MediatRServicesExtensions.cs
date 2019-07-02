@@ -10,7 +10,7 @@ using Rocket.Surgery.Extensions.DependencyInjection;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    /// Class MediatRServicesExtensions.
+    ///  MediatRServicesExtensions.
     /// </summary>
     public static class MediatRServicesExtensions
     {

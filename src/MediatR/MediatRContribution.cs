@@ -8,10 +8,10 @@ using Rocket.Surgery.Extensions.DependencyInjection;
 namespace Rocket.Surgery.Extensions.MediatR
 {
     /// <summary>
-    /// Class MediatRConvention.
-    /// Implements the <see cref="Rocket.Surgery.Extensions.DependencyInjection.IServiceConvention" />
+    ///  MediatRConvention.
+    /// Implements the <see cref="IServiceConvention" />
     /// </summary>
-    /// <seealso cref="Rocket.Surgery.Extensions.DependencyInjection.IServiceConvention" />
+    /// <seealso cref="IServiceConvention" />
     public class MediatRConvention : IServiceConvention
     {
         /// <summary>

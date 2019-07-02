@@ -14,7 +14,7 @@ namespace Rocket.Surgery.Conventions
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <returns>IConventionHostBuilder.</returns>
-        public static IConventionHostBuilder WithFluentValidation(this IConventionHostBuilder builder)
+        public static IConventionHostBuilder WithMediatR(this IConventionHostBuilder builder)
         {
             builder.Scanner.PrependConvention<MediatRConvention>();
             return builder;
