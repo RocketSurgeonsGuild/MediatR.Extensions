@@ -15,16 +15,16 @@
   <ItemGroup>
     <PackageReference Update="MediatR" Version="7.0.0" />
     <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
-    <PackageReference Update="Rocket.Surgery.Conventions" Version="6.2.1" />
-    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="6.2.1" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="6.0.2" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="6.0.2" />
-    <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="6.0.0" />
+    <PackageReference Update="Rocket.Surgery.Conventions" Version="6.2.2" />
+    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="6.2.2" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="6.0.3" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="6.0.3" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="6.0.1" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Rocket.Surgery.Extensions.Testing" Version="1.1.8" />
     <PackageReference Update="Autofac.Extras.FakeItEasy" Version="5.0.1" />
-    <PackageReference Update="Bogus" Version="27.0.1" />
+    <PackageReference Update="Bogus" Version="28.0.1" />
     <PackageReference Update="coverlet.collector" Version="1.0.1" />
     <PackageReference Update="coverlet.msbuild" Version="2.6.3" />
     <PackageReference Update="FakeItEasy" Version="5.1.1" />
