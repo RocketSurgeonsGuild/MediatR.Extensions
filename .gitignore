@@ -202,3 +202,5 @@ project.lock.json
 /tools/*.md5sum
 !tools/packages.config
 .npmrc
+
+codealike.json
