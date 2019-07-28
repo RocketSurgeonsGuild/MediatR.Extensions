@@ -23,9 +23,9 @@
     <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Update="Rocket.Surgery.Conventions" Version="6.2.4" />
     <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="6.2.4" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="6.0.3" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="6.0.3" />
-    <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="6.0.1" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="6.0.4" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="6.0.4" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="6.0.2" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Rocket.Surgery.Extensions.Testing" Version="1.1.13" />
