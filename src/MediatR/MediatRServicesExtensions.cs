@@ -19,7 +19,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <returns>IServiceConventionContext.</returns>
-        public static IServiceConventionContext WithMediatR(this IServiceConventionContext builder)
+        public static IServiceConventionContext UseMediatR(this IServiceConventionContext builder)
         {
             DefaultServices(builder.Services, builder.AssemblyCandidateFinder);
             return builder;

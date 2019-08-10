@@ -8,6 +8,7 @@ using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Rocket.Surgery.Conventions;
 using Rocket.Surgery.Conventions.Reflection;
 using Rocket.Surgery.Conventions.Scanners;
 using Rocket.Surgery.Extensions.DependencyInjection;
@@ -51,9 +52,9 @@ namespace Rocket.Surgery.Extensions.MediatR.Tests
             AutoFake.Provide<IAssemblyProvider>(new TestAssemblyProvider());
             AutoFake.Provide<IAssemblyCandidateFinder>(new TestAssemblyCandidateFinder());
             AutoFake.Provide<IServiceCollection>(new ServiceCollection());
-            AutoFake.Provide<IConventionScanner>(new BasicConventionScanner(new MediatRConvention()));
+            AutoFake.Provide<IConventionScanner>(new BasicConventionScanner(A.Fake<IServiceProviderDictionary>(), new MediatRConvention()));
             var builder = AutoFake.Resolve<ServicesBuilder>();
-            builder.WithMediatR();
+            builder.UseMediatR();
 
             var sub = A.Fake<IPipelineBehavior<Request, Unit>>();
 

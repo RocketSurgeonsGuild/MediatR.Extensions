@@ -20,7 +20,7 @@ namespace Rocket.Surgery.Extensions.MediatR
         /// <param name="context">The context.</param>
         public void Register(IServiceConventionContext context)
         {
-            context.WithMediatR();
+            context.UseMediatR();
         }
     }
 }
