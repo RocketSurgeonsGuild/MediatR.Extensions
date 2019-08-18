@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
@@ -66,7 +66,7 @@ namespace Rocket.Surgery.Extensions.MediatR.Tests
 
             await mediator.Send(new Request());
 
-            A.CallTo(() => sub.Handle(A<Request>._, A<CancellationToken>._, A<RequestHandlerDelegate<Unit>>._)).MustHaveHappened(Repeated.Exactly.Once);
+            A.CallTo(() => sub.Handle(A<Request>._, A<CancellationToken>._, A<RequestHandlerDelegate<Unit>>._)).MustHaveHappenedOnceExactly();
         }
 
         public class Request : IRequest { }
