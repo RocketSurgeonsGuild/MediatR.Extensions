@@ -25,7 +25,7 @@
     <PackageReference Update="Rocket.Surgery.Conventions" Version="7.0.5" />
     <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="7.0.5" />
     <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="7.0.5" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="7.0.5" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="7.0.6" />
     <PackageReference Update="Rocket.Surgery.Extensions.Serilog.Abstractions" Version="6.0.5" />
   </ItemGroup>
   <ItemGroup>
