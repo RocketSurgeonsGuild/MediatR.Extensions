@@ -16,7 +16,7 @@
   <ItemGroup>
     <PackageReference Update="MediatR" Version="7.0.0" />
     <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
-    <PackageReference Update="Rocket.Surgery.Conventions" Version="7.2.1" />
+    <PackageReference Update="Rocket.Surgery.Conventions" Version="8.0.0" />
     <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="7.2.1" />
     <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
   </ItemGroup>
