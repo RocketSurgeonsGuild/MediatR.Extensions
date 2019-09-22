@@ -18,7 +18,7 @@ using Xunit.Abstractions;
 
 namespace Rocket.Surgery.Extensions.MediatR.Tests
 {
-    public class MediatRTests : AutoTestBase
+    public class MediatRTests : AutoFakeTest
     {
         public MediatRTests(ITestOutputHelper outputHelper) : base(outputHelper) { }
 
