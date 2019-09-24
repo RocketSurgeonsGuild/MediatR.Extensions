@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using MediatR;
+using MediatR.Registration;
+using Rocket.Surgery.Conventions;
 using Rocket.Surgery.Conventions.Reflection;
 using Rocket.Surgery.Extensions.DependencyInjection;
 
@@ -15,22 +17,30 @@ namespace Microsoft.Extensions.DependencyInjection
     public static class MediatRServicesExtensions
     {
         /// <summary>
-        /// Withes the mediat r.
+        /// Uses MediatR.
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <returns>IServiceConventionContext.</returns>
         public static IServiceConventionContext UseMediatR(this IServiceConventionContext builder)
         {
-            DefaultServices(builder.Services, builder.AssemblyCandidateFinder);
-            return builder;
+            var serviceConfig = builder.Get<MediatRServiceConfiguration>() ?? new MediatRServiceConfiguration();
+            builder.Set(serviceConfig);
+            return UseMediatR(builder, serviceConfig);
         }
 
-        private static void DefaultServices(IServiceCollection services, IAssemblyCandidateFinder assemblyCandidateFinder)
+        /// <summary>
+        /// Uses MediatR.
+        /// </summary>
+        /// <param name="builder">The builder.</param>
+        /// <returns>IServiceConventionContext.</returns>
+        public static IServiceConventionContext UseMediatR(this IServiceConventionContext builder, MediatRServiceConfiguration serviceConfig)
         {
-            var assemblies = assemblyCandidateFinder
+            var assemblies = builder.AssemblyCandidateFinder
                 .GetCandidateAssemblies(nameof(MediatR)).ToArray();
 
-            services.AddMediatR(assemblies);
+            ServiceRegistrar.AddRequiredServices(builder.Services, serviceConfig);
+            ServiceRegistrar.AddMediatRClasses(builder.Services, assemblies);
+            return builder;
         }
     }
 }

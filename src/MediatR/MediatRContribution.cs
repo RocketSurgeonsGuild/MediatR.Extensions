@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 using Rocket.Surgery.Extensions.MediatR;
 using Rocket.Surgery.Conventions;
 using Rocket.Surgery.Extensions.DependencyInjection;
@@ -20,7 +21,9 @@ namespace Rocket.Surgery.Extensions.MediatR
         /// <param name="context">The context.</param>
         public void Register(IServiceConventionContext context)
         {
-            context.UseMediatR();
+            var serviceConfig = context.Get<MediatRServiceConfiguration>() ?? new MediatRServiceConfiguration();
+            context.Set(serviceConfig);
+            context.UseMediatR(serviceConfig);
         }
     }
 }

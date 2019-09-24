@@ -4,7 +4,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using Autofac;
 using FakeItEasy;
+using FluentAssertions;
 using MediatR;
+using MediatR.Registration;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -59,6 +61,33 @@ namespace Rocket.Surgery.Extensions.MediatR.Tests
             var sub = A.Fake<IPipelineBehavior<Request, Unit>>();
 
             builder.Services.AddSingleton(sub);
+
+            builder.Services.Should().Contain(x => x.ImplementationType == typeof(MediatRServiceConfiguration) && x.Lifetime == ServiceLifetime.Singleton);
+
+            var r = builder.Build();
+
+            var mediator = r.GetRequiredService<IMediator>();
+
+            await mediator.Send(new Request());
+
+            A.CallTo(() => sub.Handle(A<Request>._, A<CancellationToken>._, A<RequestHandlerDelegate<Unit>>._)).MustHaveHappenedOnceExactly();
+        }
+
+        [Fact]
+        public async Task Test2()
+        {
+            AutoFake.Provide<IAssemblyProvider>(new TestAssemblyProvider());
+            AutoFake.Provide<IAssemblyCandidateFinder>(new TestAssemblyCandidateFinder());
+            AutoFake.Provide<IServiceCollection>(new ServiceCollection());
+            AutoFake.Provide<IConventionScanner>(new BasicConventionScanner(A.Fake<IServiceProviderDictionary>(), new MediatRConvention()));
+            var builder = AutoFake.Resolve<ServicesBuilder>();
+            builder.UseMediatR(new MediatRServiceConfiguration().AsSingleton());
+
+            var sub = A.Fake<IPipelineBehavior<Request, Unit>>();
+
+            builder.Services.AddSingleton(sub);
+
+            builder.Services.Should().Contain(x => x.ImplementationType == typeof(MediatRServiceConfiguration) && x.Lifetime == ServiceLifetime.Singleton);
 
             var r = builder.Build();
 
