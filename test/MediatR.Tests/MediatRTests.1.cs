@@ -62,7 +62,7 @@ namespace Rocket.Surgery.Extensions.MediatR.Tests
 
             builder.Services.AddSingleton(sub);
 
-            builder.Services.Should().Contain(x => x.ImplementationType == typeof(MediatRServiceConfiguration) && x.Lifetime == ServiceLifetime.Singleton);
+            builder.Services.Should().Contain(x => x.ServiceType == typeof(IMediator) && x.Lifetime == ServiceLifetime.Transient);
 
             var r = builder.Build();
 
@@ -87,7 +87,7 @@ namespace Rocket.Surgery.Extensions.MediatR.Tests
 
             builder.Services.AddSingleton(sub);
 
-            builder.Services.Should().Contain(x => x.ImplementationType == typeof(MediatRServiceConfiguration) && x.Lifetime == ServiceLifetime.Singleton);
+            builder.Services.Should().Contain(x => x.ServiceType == typeof(IMediator) && x.Lifetime == ServiceLifetime.Singleton);
 
             var r = builder.Build();
 

@@ -25,6 +25,7 @@ namespace Rocket.Surgery.Conventions
         /// Adds MediatR.
         /// </summary>
         /// <param name="builder">The builder.</param>
+        /// <param name="serviceConfig">The MediatR service configuration.</param>
         /// <returns>IConventionHostBuilder.</returns>
         public static IConventionHostBuilder UseMediatR(this IConventionHostBuilder builder, MediatRServiceConfiguration serviceConfig)
         {

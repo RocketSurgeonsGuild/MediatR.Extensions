@@ -32,9 +32,11 @@ namespace Microsoft.Extensions.DependencyInjection
         /// Uses MediatR.
         /// </summary>
         /// <param name="builder">The builder.</param>
+        /// <param name="serviceConfig">The MediatR service configuration.</param>
         /// <returns>IServiceConventionContext.</returns>
         public static IServiceConventionContext UseMediatR(this IServiceConventionContext builder, MediatRServiceConfiguration serviceConfig)
         {
+            builder.Set(serviceConfig);
             var assemblies = builder.AssemblyCandidateFinder
                 .GetCandidateAssemblies(nameof(MediatR)).ToArray();
 
