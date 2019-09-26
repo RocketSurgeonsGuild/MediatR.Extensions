@@ -16,9 +16,9 @@
   <ItemGroup>
     <PackageReference Update="MediatR" Version="7.0.0" />
     <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
-    <PackageReference Update="Rocket.Surgery.Conventions" Version="8.0.1" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="8.0.1" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+    <PackageReference Update="Rocket.Surgery.Conventions" Version="9.0.0" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="9.0.0" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Rocket.Surgery.Extensions.Testing.FakeItEasy" Version="2.0.2" />

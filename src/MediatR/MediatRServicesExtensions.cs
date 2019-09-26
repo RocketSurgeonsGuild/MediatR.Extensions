@@ -23,8 +23,7 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns>IServiceConventionContext.</returns>
         public static IServiceConventionContext UseMediatR(this IServiceConventionContext builder)
         {
-            var serviceConfig = builder.Get<MediatRServiceConfiguration>() ?? new MediatRServiceConfiguration();
-            builder.Set(serviceConfig);
+            var serviceConfig = builder.GetOrAdd(() => new MediatRServiceConfiguration());
             return UseMediatR(builder, serviceConfig);
         }
 
