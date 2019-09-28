@@ -17,11 +17,11 @@
     <PackageReference Update="MediatR" Version="7.0.0" />
     <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Update="Rocket.Surgery.Conventions" Version="9.0.0" />
-    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="9.0.0" />
+    <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection" Version="9.0.2" />
     <PackageReference Update="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" Version="9.0.0" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="Rocket.Surgery.Extensions.Testing.FakeItEasy" Version="2.1.0" />
+    <PackageReference Update="Rocket.Surgery.Extensions.Testing.FakeItEasy" Version="2.1.2" />
     <PackageReference Update="Autofac.Extras.FakeItEasy" Version="5.0.1" />
     <PackageReference Update="Bogus" Version="28.3.1" />
     <PackageReference Update="coverlet.collector" Version="1.1.0" />
