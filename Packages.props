@@ -27,6 +27,9 @@
     <PackageReference Update="Rocket.Surgery.Nuke.DotNetCore" Version="0.8.3" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Update="System.Diagnostics.DiagnosticSource" Version="4.6.0" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Update="MediatR" Version="7.0.0" />
     <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
     <PackageReference Update="Rocket.Surgery.Conventions" Version="9.0.6" />
