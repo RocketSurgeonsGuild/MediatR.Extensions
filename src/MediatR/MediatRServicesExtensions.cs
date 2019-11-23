@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Linq;
-using System.Reflection;
+using JetBrains.Annotations;
 using MediatR;
 using MediatR.Registration;
 using Rocket.Surgery.Conventions;
@@ -12,8 +11,9 @@ using Rocket.Surgery.Extensions.DependencyInjection;
 namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
-    ///  MediatRServicesExtensions.
+    /// MediatRServicesExtensions.
     /// </summary>
+    [PublicAPI]
     public static class MediatRServicesExtensions
     {
         /// <summary>
@@ -21,8 +21,13 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="builder">The builder.</param>
         /// <returns>IServiceConventionContext.</returns>
-        public static IServiceConventionContext UseMediatR(this IServiceConventionContext builder)
+        public static IServiceConventionContext UseMediatR([NotNull] this IServiceConventionContext builder)
         {
+            if (builder == null)
+            {
+                throw new ArgumentNullException(nameof(builder));
+            }
+
             var serviceConfig = builder.GetOrAdd(() => new MediatRServiceConfiguration());
             return UseMediatR(builder, serviceConfig);
         }
@@ -33,11 +38,24 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <param name="builder">The builder.</param>
         /// <param name="serviceConfig">The MediatR service configuration.</param>
         /// <returns>IServiceConventionContext.</returns>
-        public static IServiceConventionContext UseMediatR(this IServiceConventionContext builder, MediatRServiceConfiguration serviceConfig)
+        public static IServiceConventionContext UseMediatR(
+            this IServiceConventionContext builder,
+            MediatRServiceConfiguration serviceConfig
+        )
         {
+            if (builder is null)
+            {
+                throw new System.ArgumentNullException(nameof(builder));
+            }
+
+            if (serviceConfig is null)
+            {
+                throw new System.ArgumentNullException(nameof(serviceConfig));
+            }
+
             builder.Set(serviceConfig);
             var assemblies = builder.AssemblyCandidateFinder
-                .GetCandidateAssemblies(nameof(MediatR)).ToArray();
+               .GetCandidateAssemblies(nameof(MediatR)).ToArray();
 
             ServiceRegistrar.AddRequiredServices(builder.Services, serviceConfig);
             ServiceRegistrar.AddMediatRClasses(builder.Services, assemblies);

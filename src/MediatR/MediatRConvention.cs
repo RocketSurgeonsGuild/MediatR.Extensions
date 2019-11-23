@@ -1,15 +1,15 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Rocket.Surgery.Extensions.MediatR;
 using Rocket.Surgery.Conventions;
 using Rocket.Surgery.Extensions.DependencyInjection;
+using Rocket.Surgery.Extensions.MediatR;
 
 [assembly: Convention(typeof(MediatRConvention))]
 
 namespace Rocket.Surgery.Extensions.MediatR
 {
     /// <summary>
-    ///  MediatRConvention.
+    /// MediatRConvention.
     /// Implements the <see cref="IServiceConvention" />
     /// </summary>
     /// <seealso cref="IServiceConvention" />
@@ -21,6 +21,11 @@ namespace Rocket.Surgery.Extensions.MediatR
         /// <param name="context">The context.</param>
         public void Register(IServiceConventionContext context)
         {
+            if (context is null)
+            {
+                throw new System.ArgumentNullException(nameof(context));
+            }
+
             var serviceConfig = context.GetOrAdd(() => new MediatRServiceConfiguration());
             context.UseMediatR(serviceConfig);
         }

@@ -1,0 +1,9 @@
+Microsoft.Extensions.DependencyInjection.MediatRServicesExtensions
+Rocket.Surgery.Conventions.MediatRHostBuilderExtensions
+Rocket.Surgery.Extensions.MediatR.MediatRConvention
+Rocket.Surgery.Extensions.MediatR.MediatRConvention.MediatRConvention() -> void
+Rocket.Surgery.Extensions.MediatR.MediatRConvention.Register(Rocket.Surgery.Extensions.DependencyInjection.IServiceConventionContext context) -> void
+static Microsoft.Extensions.DependencyInjection.MediatRServicesExtensions.UseMediatR(this Rocket.Surgery.Extensions.DependencyInjection.IServiceConventionContext builder) -> Rocket.Surgery.Extensions.DependencyInjection.IServiceConventionContext
+static Microsoft.Extensions.DependencyInjection.MediatRServicesExtensions.UseMediatR(this Rocket.Surgery.Extensions.DependencyInjection.IServiceConventionContext builder, MediatR.MediatRServiceConfiguration serviceConfig) -> Rocket.Surgery.Extensions.DependencyInjection.IServiceConventionContext
+static Rocket.Surgery.Conventions.MediatRHostBuilderExtensions.UseMediatR(this Rocket.Surgery.Conventions.IConventionHostBuilder builder) -> Rocket.Surgery.Conventions.IConventionHostBuilder
+static Rocket.Surgery.Conventions.MediatRHostBuilderExtensions.UseMediatR(this Rocket.Surgery.Conventions.IConventionHostBuilder builder, MediatR.MediatRServiceConfiguration serviceConfig) -> Rocket.Surgery.Conventions.IConventionHostBuilder
