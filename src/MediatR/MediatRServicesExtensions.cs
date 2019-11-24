@@ -45,12 +45,12 @@ namespace Microsoft.Extensions.DependencyInjection
         {
             if (builder is null)
             {
-                throw new System.ArgumentNullException(nameof(builder));
+                throw new ArgumentNullException(nameof(builder));
             }
 
             if (serviceConfig is null)
             {
-                throw new System.ArgumentNullException(nameof(serviceConfig));
+                throw new ArgumentNullException(nameof(serviceConfig));
             }
 
             builder.Set(serviceConfig);
