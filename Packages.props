@@ -20,7 +20,7 @@
     <PackageReference Update="Rocket.Surgery.Nuke.DotNetCore" Version="0.8.3" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Update="System.Diagnostics.DiagnosticSource" Version="4.6.0" />
+    <PackageReference Update="System.Diagnostics.DiagnosticSource" Version="4.7.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="MediatR" Version="7.0.0" />
