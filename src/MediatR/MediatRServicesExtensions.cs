@@ -53,6 +53,8 @@ namespace Microsoft.Extensions.DependencyInjection
                 throw new ArgumentNullException(nameof(serviceConfig));
             }
 
+            if (builder.Services.Any(z => z.ServiceType == typeof(IMediator))) return builder;
+
             builder.Set(serviceConfig);
             var assemblies = builder.AssemblyCandidateFinder
                .GetCandidateAssemblies(nameof(MediatR)).ToArray();
