@@ -15,9 +15,9 @@
 <!-- history badges -->
 
 <!-- nuget packages -->
-| Package | NuGet | MyGet |
-| ------- | ----- | ----- |
-| Rocket.Surgery.Extensions.MediatR | [![nuget-version-o26yceyxc2fq-badge]![nuget-downloads-o26yceyxc2fq-badge]][nuget-o26yceyxc2fq] | [![myget-version-o26yceyxc2fq-badge]![myget-downloads-o26yceyxc2fq-badge]][myget-o26yceyxc2fq] |
+| Package | NuGet |
+| ------- | ----- |
+| Rocket.Surgery.Extensions.MediatR | [![nuget-version-o26yceyxc2fq-badge]![nuget-downloads-o26yceyxc2fq-badge]][nuget-o26yceyxc2fq] |
 <!-- nuget packages -->
 
 # Whats next?
@@ -41,9 +41,6 @@ TBD
 [nuget-o26yceyxc2fq]: https://www.nuget.org/packages/Rocket.Surgery.Extensions.MediatR/
 [nuget-version-o26yceyxc2fq-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.Extensions.MediatR.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
 [nuget-downloads-o26yceyxc2fq-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.Extensions.MediatR.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
-[myget-o26yceyxc2fq]: https://www.myget.org/feed/rocket-surgeons-guild/package/nuget/Rocket.Surgery.Extensions.MediatR
-[myget-version-o26yceyxc2fq-badge]: https://img.shields.io/myget/rocket-surgeons-guild/vpre/Rocket.Surgery.Extensions.MediatR.svg?label=myget&color=004880&logo=nuget&style=flat-square "MyGet Pre-Release Version"
-[myget-downloads-o26yceyxc2fq-badge]: https://img.shields.io/myget/rocket-surgeons-guild/dt/Rocket.Surgery.Extensions.MediatR.svg?color=004880&logo=nuget&style=flat-square "MyGet Downloads"
 <!-- generated references -->
 
 <!-- nuke-data
@@ -57,6 +54,4 @@ azurepipelines:
 appveyor:
   account: RocketSurgeonsGuild
   build: mediatr-extensions
-myget:
-  account: rocket-surgeons-guild
 -->
