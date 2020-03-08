@@ -8,6 +8,9 @@
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
         <PackageReference Include="Rocket.Surgery.Conventions" />
         <PackageReference Include="System.Diagnostics.DiagnosticSource" />
-        <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection.Abstractions" />
+        <PackageReference Include="Rocket.Surgery.Conventions.DependencyInjection.Abstractions" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\MediatR.Extensions\Rocket.Surgery.Extensions.MediatR.Extensions.csproj" />
     </ItemGroup>
 </Project>
