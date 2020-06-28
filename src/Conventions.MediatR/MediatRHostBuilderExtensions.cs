@@ -1,7 +1,8 @@
 ﻿using System;
 using JetBrains.Annotations;
 using MediatR;
-using Rocket.Surgery.Extensions.MediatR;
+using Microsoft.Extensions.Hosting;
+using Rocket.Surgery.Conventions.MediatR;
 
 // ReSharper disable once CheckNamespace
 namespace Rocket.Surgery.Conventions
@@ -16,6 +17,22 @@ namespace Rocket.Surgery.Conventions
         /// Adds MediatR.
         /// </summary>
         /// <param name="builder">The builder.</param>
+        /// <returns>IHostBuilder.</returns>
+        public static IHostBuilder UseMediatR([NotNull] this IHostBuilder builder)
+        {
+            if (builder == null)
+            {
+                throw new ArgumentNullException(nameof(builder));
+            }
+
+            builder.GetConventions().UseMediatR();
+            return builder;
+        }
+
+        /// <summary>
+        /// Adds MediatR.
+        /// </summary>
+        /// <param name="builder">The builder.</param>
         /// <returns>IConventionHostBuilder.</returns>
         public static IConventionHostBuilder UseMediatR([NotNull] this IConventionHostBuilder builder)
         {
@@ -25,6 +42,31 @@ namespace Rocket.Surgery.Conventions
             }
 
             builder.Scanner.PrependConvention<MediatRConvention>();
+            return builder;
+        }
+
+        /// <summary>
+        /// Adds MediatR.
+        /// </summary>
+        /// <param name="builder">The builder.</param>
+        /// <param name="serviceConfig">The MediatR service configuration.</param>
+        /// <returns>IHostBuilder.</returns>
+        public static IHostBuilder UseMediatR(
+            this IHostBuilder builder,
+            MediatRServiceConfiguration serviceConfig
+        )
+        {
+            if (builder == null)
+            {
+                throw new ArgumentNullException(nameof(builder));
+            }
+
+            if (serviceConfig is null)
+            {
+                throw new ArgumentNullException(nameof(serviceConfig));
+            }
+
+            builder.GetConventions().UseMediatR(serviceConfig);
             return builder;
         }
 

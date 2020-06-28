@@ -4,8 +4,8 @@ using JetBrains.Annotations;
 using MediatR;
 using MediatR.Registration;
 using Rocket.Surgery.Conventions;
+using Rocket.Surgery.Conventions.DependencyInjection;
 using Rocket.Surgery.Conventions.Reflection;
-using Rocket.Surgery.Extensions.DependencyInjection;
 
 // ReSharper disable once CheckNamespace
 namespace Microsoft.Extensions.DependencyInjection
