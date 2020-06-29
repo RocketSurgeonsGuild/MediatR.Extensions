@@ -1,14 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>netcoreapp3.1;netcoreapp2.1</TargetFrameworks>
+        <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\src\MediatR\Rocket.Surgery.Extensions.MediatR.csproj" />
-        <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection" />
-    </ItemGroup>
-    <ItemGroup>
-        <Content Include="xunit.runner.json">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
+        <ProjectReference Include="..\..\src\Conventions.MediatR\Rocket.Surgery.Conventions.MediatR.csproj" />
+        <PackageReference Include="Rocket.Surgery.Conventions" />
     </ItemGroup>
 </Project>

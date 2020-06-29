@@ -1,12 +1,12 @@
 ﻿using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Rocket.Surgery.Conventions;
-using Rocket.Surgery.Extensions.DependencyInjection;
-using Rocket.Surgery.Extensions.MediatR;
+using Rocket.Surgery.Conventions.DependencyInjection;
+using Rocket.Surgery.Conventions.MediatR;
 
 [assembly: Convention(typeof(MediatRConvention))]
 
-namespace Rocket.Surgery.Extensions.MediatR
+namespace Rocket.Surgery.Conventions.MediatR
 {
     /// <summary>
     /// MediatRConvention.
