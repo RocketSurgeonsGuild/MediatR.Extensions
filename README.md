@@ -17,7 +17,7 @@
 <!-- nuget packages -->
 | Package | NuGet |
 | ------- | ----- |
-| Rocket.Surgery.Extensions.MediatR | [![nuget-version-o26yceyxc2fq-badge]![nuget-downloads-o26yceyxc2fq-badge]][nuget-o26yceyxc2fq] |
+| Rocket.Surgery.Conventions.MediatR | [![nuget-version-4rwfb4xprziq-badge]![nuget-downloads-4rwfb4xprziq-badge]][nuget-4rwfb4xprziq] |
 <!-- nuget packages -->
 
 # Whats next?
@@ -37,9 +37,9 @@ TBD
 [github]: https://github.com/RocketSurgeonsGuild/MediatR.Extensions/actions?query=workflow%3Aci
 [github-badge]: https://img.shields.io/github/workflow/status/RocketSurgeonsGuild/MediatR.Extensions/ci.svg?label=github&logo=github&color=b845fc&logoColor=b845fc&style=flat "GitHub Actions Status"
 [github-history-badge]: https://buildstats.info/github/chart/RocketSurgeonsGuild/MediatR.Extensions?includeBuildsFromPullRequest=false "GitHub Actions History"
-[nuget-o26yceyxc2fq]: https://www.nuget.org/packages/Rocket.Surgery.Extensions.MediatR/
-[nuget-version-o26yceyxc2fq-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.Extensions.MediatR.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
-[nuget-downloads-o26yceyxc2fq-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.Extensions.MediatR.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
+[nuget-4rwfb4xprziq]: https://www.nuget.org/packages/Rocket.Surgery.Conventions.MediatR/
+[nuget-version-4rwfb4xprziq-badge]: https://img.shields.io/nuget/v/Rocket.Surgery.Conventions.MediatR.svg?color=004880&logo=nuget&style=flat-square "NuGet Version"
+[nuget-downloads-4rwfb4xprziq-badge]: https://img.shields.io/nuget/dt/Rocket.Surgery.Conventions.MediatR.svg?color=004880&logo=nuget&style=flat-square "NuGet Downloads"
 <!-- generated references -->
 
 <!-- nuke-data
