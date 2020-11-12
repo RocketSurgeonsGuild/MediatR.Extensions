@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using FakeItEasy;
 using FluentAssertions;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Rocket.Surgery.Conventions;
 using Rocket.Surgery.Conventions.DependencyInjection;
 using Rocket.Surgery.Conventions.MediatR;
 using Rocket.Surgery.Conventions.Reflection;
-using Rocket.Surgery.Conventions.Scanners;
 using Rocket.Surgery.Extensions.Testing;
 using Xunit;
 using Xunit.Abstractions;
@@ -23,24 +23,23 @@ namespace Rocket.Surgery.Extensions.MediatR.Tests
         [Fact]
         public async Task Test1()
         {
-            AutoFake.Provide<IAssemblyProvider>(new TestAssemblyProvider());
-            AutoFake.Provide<IAssemblyCandidateFinder>(new TestAssemblyCandidateFinder());
-            AutoFake.Provide<IServiceCollection>(new ServiceCollection());
-            AutoFake.Provide<IConventionScanner>(
-                new BasicConventionScanner(A.Fake<IServiceProviderDictionary>(), new MediatRConvention())
+            var builder = new ConventionContextBuilder(new Dictionary<object, object?>());
+            var context = ConventionContext.From(builder
+                .Set<IConfiguration>(new ConfigurationBuilder().Build())
+                .EnableConventionAttributes()
+                .UseAssemblies(new TestAssemblyProvider().GetAssemblies())
             );
-            var builder = AutoFake.Resolve<ServicesBuilder>();
-            builder.UseMediatR();
+            var services = new ServiceCollection().ApplyConventions(context);
 
             var sub = A.Fake<IPipelineBehavior<Request, Unit>>();
 
-            builder.Services.AddSingleton(sub);
+            services.AddSingleton(sub);
 
-            builder.Services.Should().Contain(
+            services.Should().Contain(
                 x => x.ServiceType == typeof(IMediator) && x.Lifetime == ServiceLifetime.Transient
             );
 
-            var r = builder.Build();
+            var r = services.BuildServiceProvider();
 
             var mediator = r.GetRequiredService<IMediator>();
 
@@ -53,24 +52,24 @@ namespace Rocket.Surgery.Extensions.MediatR.Tests
         [Fact]
         public async Task Test2()
         {
-            AutoFake.Provide<IAssemblyProvider>(new TestAssemblyProvider());
-            AutoFake.Provide<IAssemblyCandidateFinder>(new TestAssemblyCandidateFinder());
-            AutoFake.Provide<IServiceCollection>(new ServiceCollection());
-            AutoFake.Provide<IConventionScanner>(
-                new BasicConventionScanner(A.Fake<IServiceProviderDictionary>(), new MediatRConvention())
+            var builder = new ConventionContextBuilder(new Dictionary<object, object?>());
+            var context = ConventionContext.From(builder
+                .Set<IConfiguration>(new ConfigurationBuilder().Build())
+                .Set(new MediatRServiceConfiguration().AsSingleton())
+                .EnableConventionAttributes()
+                .UseAssemblies(new TestAssemblyProvider().GetAssemblies())
+
             );
-            var builder = AutoFake.Resolve<ServicesBuilder>();
-            builder.UseMediatR(new MediatRServiceConfiguration().AsSingleton());
+            var services = new ServiceCollection().ApplyConventions(context);
 
             var sub = A.Fake<IPipelineBehavior<Request, Unit>>();
 
-            builder.Services.AddSingleton(sub);
-
-            builder.Services.Should().Contain(
+            services.AddSingleton(sub);
+            services.Should().Contain(
                 x => x.ServiceType == typeof(IMediator) && x.Lifetime == ServiceLifetime.Singleton
             );
 
-            var r = builder.Build();
+            var r = services.BuildServiceProvider();
 
             var mediator = r.GetRequiredService<IMediator>();
 
@@ -87,7 +86,7 @@ namespace Rocket.Surgery.Extensions.MediatR.Tests
             public IEnumerable<Assembly> GetAssemblies() => new[]
             {
                 typeof(TestAssemblyProvider).GetTypeInfo().Assembly,
-                typeof(MediatRServicesExtensions).GetTypeInfo().Assembly
+                typeof(MediatRConvention).GetTypeInfo().Assembly
             };
         }
 
@@ -96,7 +95,7 @@ namespace Rocket.Surgery.Extensions.MediatR.Tests
             public IEnumerable<Assembly> GetCandidateAssemblies(IEnumerable<string> candidates) => new[]
             {
                 typeof(TestAssemblyProvider).GetTypeInfo().Assembly,
-                typeof(MediatRServicesExtensions).GetTypeInfo().Assembly
+                typeof(MediatRConvention).GetTypeInfo().Assembly
             };
         }
 
