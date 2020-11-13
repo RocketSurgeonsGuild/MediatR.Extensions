@@ -26,7 +26,7 @@
     <PackageReference Update="MediatR" Version="9.0.0" />
     <PackageReference Update="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Update="Rocket.Surgery.Conventions" Version="10.0.0-beta.50" />
-    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="10.0.0-beta.50" />
+    <PackageReference Update="Rocket.Surgery.Conventions.Abstractions" Version="10.0.0-beta.51" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Update="Bogus" Version="31.0.3" />
